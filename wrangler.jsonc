@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ic3-prep",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-19",
+  // Keep the *.workers.dev address; per-version preview URLs aren't needed.
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [{ "pattern": "ic3.knhdixh.com", "custom_domain": true }],
+  "vars": { "CANONICAL_HOST": "ic3.knhdixh.com" },
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // Worker runs first so the workers.dev redirect covers every path.
+    "run_worker_first": true
+  }
+}
