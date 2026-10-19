@@ -2,7 +2,7 @@
 
 IC3 Digital Literacy practice: a timed mock exam, practice by domain, and a short study plan.
 
-**Live:** https://ic3.knhdixh.com
+**Live:** https://ic3.knhdixh.com · auto-deploys from `main` via Workers Builds
 
 ![Mock exam](docs/screenshot.png)
 
